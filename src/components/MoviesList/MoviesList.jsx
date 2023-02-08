@@ -5,9 +5,8 @@ export const Movieslist = ({ movies }) => {
   return (
     <ul>
       {movies.map(movie => (
-        <li>
+        <li key={movie.id}>
           <NavLink to={`/movies/${movie.id}`} state={{ from: location }}>
-            {' '}
             {movie.title}
           </NavLink>
         </li>
