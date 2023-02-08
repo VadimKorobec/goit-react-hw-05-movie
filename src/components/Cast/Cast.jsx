@@ -4,7 +4,7 @@ import { getMoviesCast } from 'services/apiService';
 import { BASE_IMG_URL } from 'services/constans';
 // import { Loader } from 'components/Loader/Loader';
 
-export const Cast = () => {
+const Cast = () => {
   const [cast, setCast] = useState([]);
   // const [isLoading, setIsLoading] = useState(false);
   const { moviesId } = useParams();
@@ -31,3 +31,5 @@ export const Cast = () => {
     </div>
   );
 };
+
+export default Cast;
