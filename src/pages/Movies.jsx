@@ -2,12 +2,11 @@ import { Movieslist } from 'components/MoviesList/MoviesList';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { getMoviesByQuery } from 'services/apiService';
-// import { Loader } from 'components/Loader/Loader';
 
 const Movies = () => {
   const [query, setQuery] = useState('');
   const [movies, setMovies] = useState([]);
-  // const [isLoading, setIsLoading] = useState(false);
+
   const [searchParams, setSearchParams] = useSearchParams();
 
   useEffect(() => {
@@ -18,14 +17,13 @@ const Movies = () => {
     getMoviesByQuery(searchQuery)
       .then(setMovies)
       .finally(() => {
-        // setIsLoading(false);
         setQuery(searchQuery);
       });
   }, [searchParams]);
 
   const handleSubmit = event => {
     event.preventDefault();
-    // setIsLoading(true);
+
     setSearchParams({ query });
   };
 
@@ -34,7 +32,6 @@ const Movies = () => {
   };
   return (
     <div>
-      {/* {isLoading && <Loader />} */}
       <form onSubmit={handleSubmit}>
         <input type="text" name="query" value={query} onChange={handleChange} />
         <button type="submit">Search</button>
