@@ -5,27 +5,20 @@ import { MovieDetails } from 'pages/MovieDetails';
 import { Cast } from '../Cast/Cast';
 import { Reviews } from '../Reviews/Reviews';
 import { NotFound } from 'pages/NotFound';
+import { SharedLayout } from 'components/SharedLayout/SharedLayout';
 
 export const App = () => {
   return (
-    <div>
-      <header>
-        <nav>
-          <NavLink to="/" end>
-            Home
-          </NavLink>
-          <NavLink to="/movies">Movies</NavLink>
-        </nav>
-      </header>
-      <Routes>
-        <Route path="/" element={<Home />} />
+    <Routes>
+      <Route path="/" element={<SharedLayout />}>
+        <Route index element={<Home />} />
         <Route path="/movies" element={<Movies />} />
         <Route path="/movies/:moviesId" element={<MovieDetails />}>
           <Route path="cast" element={<Cast />} />
           <Route path="reviews" element={<Reviews />} />
         </Route>
         <Route path="*" element={<NotFound />} />
-      </Routes>
-    </div>
+      </Route>
+    </Routes>
   );
 };
