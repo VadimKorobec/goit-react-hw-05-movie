@@ -2,6 +2,7 @@ import { Movieslist } from 'components/MoviesList/MoviesList';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { getMoviesByQuery } from 'services/apiService';
+import { Loader } from 'components/Loader/Loader';
 
 export const Movies = () => {
   const [query, setQuery] = useState('');
@@ -33,6 +34,7 @@ export const Movies = () => {
   };
   return (
     <div>
+      {isLoading && <Loader />}
       <form onSubmit={handleSubmit}>
         <input type="text" name="query" value={query} onChange={handleChange} />
         <button type="submit">Search</button>
