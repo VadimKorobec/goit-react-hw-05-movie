@@ -1,13 +1,27 @@
 {
   "files": {
     "main.css": "/goit-react-hw-05-movie/static/css/main.7acaea2f.css",
-    "main.js": "/goit-react-hw-05-movie/static/js/main.a5980581.js",
+    "main.js": "/goit-react-hw-05-movie/static/js/main.8fdbb4f2.js",
+    "static/js/415.ff725407.chunk.js": "/goit-react-hw-05-movie/static/js/415.ff725407.chunk.js",
+    "static/js/134.41619d99.chunk.js": "/goit-react-hw-05-movie/static/js/134.41619d99.chunk.js",
+    "static/js/884.59b12a14.chunk.js": "/goit-react-hw-05-movie/static/js/884.59b12a14.chunk.js",
+    "static/js/247.253b65eb.chunk.js": "/goit-react-hw-05-movie/static/js/247.253b65eb.chunk.js",
+    "static/js/186.61bff44e.chunk.js": "/goit-react-hw-05-movie/static/js/186.61bff44e.chunk.js",
+    "static/js/805.5d215440.chunk.js": "/goit-react-hw-05-movie/static/js/805.5d215440.chunk.js",
+    "static/js/396.633729a4.chunk.js": "/goit-react-hw-05-movie/static/js/396.633729a4.chunk.js",
     "index.html": "/goit-react-hw-05-movie/index.html",
     "main.7acaea2f.css.map": "/goit-react-hw-05-movie/static/css/main.7acaea2f.css.map",
-    "main.a5980581.js.map": "/goit-react-hw-05-movie/static/js/main.a5980581.js.map"
+    "main.8fdbb4f2.js.map": "/goit-react-hw-05-movie/static/js/main.8fdbb4f2.js.map",
+    "415.ff725407.chunk.js.map": "/goit-react-hw-05-movie/static/js/415.ff725407.chunk.js.map",
+    "134.41619d99.chunk.js.map": "/goit-react-hw-05-movie/static/js/134.41619d99.chunk.js.map",
+    "884.59b12a14.chunk.js.map": "/goit-react-hw-05-movie/static/js/884.59b12a14.chunk.js.map",
+    "247.253b65eb.chunk.js.map": "/goit-react-hw-05-movie/static/js/247.253b65eb.chunk.js.map",
+    "186.61bff44e.chunk.js.map": "/goit-react-hw-05-movie/static/js/186.61bff44e.chunk.js.map",
+    "805.5d215440.chunk.js.map": "/goit-react-hw-05-movie/static/js/805.5d215440.chunk.js.map",
+    "396.633729a4.chunk.js.map": "/goit-react-hw-05-movie/static/js/396.633729a4.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7acaea2f.css",
-    "static/js/main.a5980581.js"
+    "static/js/main.8fdbb4f2.js"
   ]
 }
