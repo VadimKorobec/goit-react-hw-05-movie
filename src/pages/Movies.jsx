@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import { getMoviesByQuery } from 'services/apiService';
 // import { Loader } from 'components/Loader/Loader';
 
-export const Movies = () => {
+const Movies = () => {
   const [query, setQuery] = useState('');
   const [movies, setMovies] = useState([]);
   // const [isLoading, setIsLoading] = useState(false);
@@ -43,3 +43,5 @@ export const Movies = () => {
     </div>
   );
 };
+
+export default Movies;
