@@ -8,8 +8,9 @@ export const Cast = () => {
   const { moviesId } = useParams();
 
   useEffect(() => {
-    getMoviesCast(moviesId).then(setCast.slice(0, 5));
+    getMoviesCast(moviesId).then(setCast);
   }, [moviesId]);
+
   return (
     <div>
       <ul>
