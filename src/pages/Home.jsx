@@ -2,7 +2,7 @@ import { Movieslist } from 'components/MoviesList/MoviesList';
 import { useEffect, useState } from 'react';
 import { getTrandingMovies } from 'services/apiService';
 
-export const Home = () => {
+const Home = () => {
   const [movies, setMovies] = useState([]);
 
   useEffect(() => {
@@ -16,3 +16,5 @@ export const Home = () => {
     </div>
   );
 };
+
+export default Home;
