@@ -9,7 +9,7 @@ import {
 import { getMoviesDetails } from 'services/apiService';
 import { BASE_IMG_URL } from 'services/constans';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const [details, setDetails] = useState(null);
   const navigate = useNavigate();
   const location = useLocation();
@@ -52,3 +52,5 @@ export const MovieDetails = () => {
     </div>
   );
 };
+
+export default MovieDetails;
