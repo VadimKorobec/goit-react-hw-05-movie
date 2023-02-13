@@ -5,14 +5,14 @@ import { getMoviesReviews } from 'services/apiService';
 const Reviews = () => {
   const [reviews, setPeviews] = useState([]);
   const [isReviewsLoading, setIsReviewsLoading] = useState(false);
-  const { moviesId } = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
-    getMoviesReviews(moviesId).then(setPeviews);
+    getMoviesReviews(id).then(setPeviews);
     if (reviews.length > 0) {
       setIsReviewsLoading(true);
     }
-  }, [moviesId, reviews]);
+  }, [id, reviews]);
 
   return (
     <div>
