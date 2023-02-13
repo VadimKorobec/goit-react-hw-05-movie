@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMoviesCast } from 'services/apiService';
 import { BASE_IMG_URL } from 'services/constants';
+import placeholder from '../../img/placeholder.webp';
 import { IMG, List, ListItem, TextWrapper } from './Cast.styled';
 
 const Cast = () => {
@@ -16,12 +17,15 @@ const Cast = () => {
   return (
     <div>
       <List>
-        {cast.map(cast => (
-          <ListItem key={cast.id}>
-            <IMG src={BASE_IMG_URL + cast.profile_path} alt={cast.name} />
+        {cast.map(({ order, profile_path, name, character }) => (
+          <ListItem key={order}>
+            <IMG
+              src={profile_path ? BASE_IMG_URL + profile_path : placeholder}
+              alt={name}
+            />
             <TextWrapper>
-              <p>{cast.original_name}</p>
-              <p>Character: {cast.character}</p>
+              <p>{name}</p>
+              <p>Character: {character}</p>
             </TextWrapper>
           </ListItem>
         ))}
