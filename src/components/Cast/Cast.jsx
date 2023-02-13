@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import { getMoviesCast } from 'services/apiService';
 import { BASE_IMG_URL } from 'services/constans';
 import { Loader } from 'components/Loader/Loader';
-import { placeholder } from '../../img/placeholder.png';
+import placeholder from '../../img/placeholder.webp';
 import { IMG, List, ListItem, TextWrapper } from './Cast.styled';
 
 const Cast = () => {
@@ -28,17 +28,24 @@ const Cast = () => {
 
   return (
     <div>
-      <List>
-        {cast.map(cast => (
-          <ListItem key={cast.id}>
-            <IMG src={BASE_IMG_URL + cast.profile_path} alt={cast.name} />
-            <TextWrapper>
-              <p>{cast.original_name}</p>
-              <p>Character: {cast.character}</p>
-            </TextWrapper>
-          </ListItem>
-        ))}
-      </List>
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <List>
+          {cast.map(({ order, profile_path, name, character }) => (
+            <ListItem key={order}>
+              <IMG
+                src={profile_path ? BASE_IMG_URL + profile_path : placeholder}
+                alt={name}
+              />
+              <TextWrapper>
+                <p>{name}</p>
+                <p>Character: {character}</p>
+              </TextWrapper>
+            </ListItem>
+          ))}
+        </List>
+      )}
     </div>
   );
 };
