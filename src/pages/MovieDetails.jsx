@@ -14,11 +14,11 @@ const MovieDetails = () => {
   const [details, setDetails] = useState(null);
   const navigate = useNavigate();
   const location = useLocation();
-  const { moviesId } = useParams();
+  const { id } = useParams();
 
   useEffect(() => {
-    getMoviesDetails(moviesId).then(setDetails);
-  }, [moviesId]);
+    getMoviesDetails(id).then(setDetails);
+  }, [id]);
 
   if (!details) {
     return null;
