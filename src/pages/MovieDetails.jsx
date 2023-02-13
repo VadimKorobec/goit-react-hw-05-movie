@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate, useParams, Outlet } from 'react-router-dom';
 import { getMoviesDetails } from 'services/apiService';
-import { BASE_IMG_URL } from 'services/constans';
+import { BASE_IMG_URL } from 'services/constants';
 import {
   AditionalBox,
   Button,
