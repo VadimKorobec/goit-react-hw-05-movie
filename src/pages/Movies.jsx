@@ -1,4 +1,4 @@
-import { Movieslist } from 'components/MoviesList/MoviesList';
+import { MoviesList } from 'components/MoviesList/MoviesList';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
 import { getMoviesByQuery } from 'services/apiService';
@@ -36,7 +36,7 @@ const Movies = () => {
         <input type="text" name="query" value={query} onChange={handleChange} />
         <button type="submit">Search</button>
       </form>
-      <Movieslist movies={movies} />
+      <MoviesList movies={movies} />
     </div>
   );
 };
