@@ -12,7 +12,7 @@ export const Movieslist = ({ movies }) => {
           <Link to={`/movies/${id}`} state={{ from: location }}>
             <img src='{poster_path ? BASE_IMG_URL + poster_path : placeholder}'
               alt={title} />
-            {title}
+            <p>{ titel}</p>
           </Link>
         </li>
       ))}
