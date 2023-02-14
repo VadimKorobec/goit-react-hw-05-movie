@@ -7,11 +7,23 @@ import { IMG, List, ListItem, TextWrapper } from './Cast.styled';
 
 const Cast = () => {
   const [cast, setCast] = useState([]);
-
-  const { id } = useParams();
+  const [isloading, setIsLoading] = useState(false)
+    const { id } = useParams();
 
   useEffect(() => {
-    getMoviesCast(id).then(setCast);
+    setIsLoading(true)
+    const fetchCast = async () => {
+      try {
+        const moviesCast = await getMoviesCast(id);
+        setCast(moviesCast);
+      } catch (error) {
+        console.error(error)
+      } finally {
+        setIsLoading(false)
+      }
+    }
+    
+    fetchCast()
   }, [id]);
 
   return (
