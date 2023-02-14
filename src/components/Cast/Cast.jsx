@@ -1,3 +1,4 @@
+import { Loader } from 'components/Loader/Loader';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { getMoviesCast } from 'services/apiService';
@@ -28,7 +29,9 @@ const Cast = () => {
 
   return (
     <div>
-      <List>
+      {isloading ? (
+        <Loader/>
+      ):(<List>
         {cast.map(({ order, profile_path, name, character }) => (
           <ListItem key={order}>
             <IMG
@@ -41,7 +44,8 @@ const Cast = () => {
             </TextWrapper>
           </ListItem>
         ))}
-      </List>
+      </List>)}
+      
     </div>
   );
 };
