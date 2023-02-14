@@ -1,4 +1,4 @@
-import { Movieslist } from 'components/MoviesList/MoviesList';
+import { MoviesList } from 'components/MoviesList/MoviesList';
 import { useEffect, useState } from 'react';
 import { getTrandingMovies } from 'services/apiService';
 
@@ -12,7 +12,7 @@ const Home = () => {
   return (
     <div>
       <h1>Trening today</h1>
-      <Movieslist movies={movies} />
+      <MoviesList movies={movies} />
     </div>
   );
 };
