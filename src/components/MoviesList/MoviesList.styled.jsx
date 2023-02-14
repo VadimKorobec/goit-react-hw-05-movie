@@ -7,6 +7,10 @@ export const TrendingList = styled.ul`
   gap: 8px;
 `;
 
+export const TrendingItem = styled.li`
+    display: block;
+`
+
 export const Link = styled(NavLink)`
   text-decoration: none;
   color: #000;
